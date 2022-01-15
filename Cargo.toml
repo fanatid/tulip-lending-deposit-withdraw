@@ -1,0 +1,13 @@
+[package]
+name = "tulip-lending-deposit-withdraw"
+version = "0.1.0"
+edition = "2021"
+publish = false
+
+[dependencies]
+anyhow = "1"
+solana-client = "=1.8.12"
+solana-sdk = "=1.8.12"
+spl-associated-token-account = "1.0.3"
+spl-token = "3.2.0"
+spl-token-lending = { git = "https://github.com/solana-labs/solana-program-library", rev = "4e73dad", package = "spl-token-lending", features = ["no-entrypoint"] }
