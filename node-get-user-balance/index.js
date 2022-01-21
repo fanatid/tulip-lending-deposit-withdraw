@@ -63,7 +63,7 @@ const LENDING_RESERVE_LAYOUT = struct([
   const wad = new BN(10).pow(new BN(18));
   const total = reserve.liquidity.availableAmount
     .add(reserve.liquidity.borrowedAmount.div(wad))
-    .add(reserve.liquidity.platformAmountWads.div(wad));
+    .sub(reserve.liquidity.platformAmountWads.div(wad));
   console.log(total.toString() / 10 ** 6);
 
   const balance = userInfo.amount.mul(total).div(collateralInfo.supply);
